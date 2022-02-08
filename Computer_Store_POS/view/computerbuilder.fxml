@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ComputerBuilderController" styleClass = "root" spacing = "10"
+prefWidth="500" >
+	
+    <stylesheets>
+        <URL value="@computerbuilder.css"/>
+    </stylesheets>
+    	
+<HBox alignment = "center">
+    <ImageView>	
+        <image><Image url="@parts.jpg"/></image>
+    </ImageView>  
+</HBox>  
+      
+<HBox spacing="10" alignment = "center">                      
+    <Label styleClass="h1" text="Computer Builder"/>
+ </HBox>  
+ 
+<HBox spacing="10" alignment="center">    
+    <Button styleClass = "largeButton" text="View&#10;Catalogue" alignment = "center"
+    fx:id="openBtn" onAction="#handleOpenCatalogue"/>
+    <Button styleClass = "largeButton" text="View&#10;Build"
+    onAction="#handleOpenBuild" />
+</HBox> 
+
+<HBox spacing="10" alignment="center" >    
+     <Button text = "Quit" onAction="#handleExit" styleClass="button1" />
+</HBox> 
+    
+</VBox>
+
+

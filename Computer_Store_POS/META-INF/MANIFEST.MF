@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: 12601338 Assignment 2
+Implementation-Version: 1.0
+Permissions: sandbox
+Codebase: *
+JavaFX-Version: 8.0
+Class-Path: 
+Created-By: JavaFX Packager
+Implementation-Vendor: luke
+Main-Class: ComputerBuilderApplication
+

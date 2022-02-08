@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller = "controller.BuildController"
+spacing = "10" prefWidth="500" >
+    
+    <TableView styleClass="table-view" fx:id="buildTv" prefHeight="400" prefWidth="500"  items="${controller.build.parts}"  >
+            <placeholder>
+            <Label>No parts in current build.</Label> </placeholder>
+		<columns>
+			<TableColumn text="Type" fx:id="typeClm">
+                        <cellValueFactory><PropertyValueFactory property="type"/></cellValueFactory>
+			</TableColumn>
+			<TableColumn text="Name" fx:id="nameClm">
+			<cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Price" fx:id="priceClm">                      
+                        </TableColumn>
+		</columns>
+	</TableView>  
+
+       
+ <HBox spacing="10" alignment = "BOTTOM_RIGHT">                      
+     <Text text="" fx:id = "totalTxt"/>
+ </HBox> 
+
+ <Button styleClass = "button1" text="Check Build" onAction="#handleCheckBuild"/>
+
+ <Button styleClass = "button1" text="Remove Selected from Build" fx:id = "removeBtn" onAction="#handleRemoveFromBuild" disable = "true"/>
+ 
+ <Button styleClass = "button1" text="Close" onAction="#closeButtonAction" />
+
+
+	<stylesheets>
+		<URL value="@computerbuilder.css" />
+	</stylesheets>
+
+</VBox>
+
